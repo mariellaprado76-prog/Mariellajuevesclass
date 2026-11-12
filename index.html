@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mariella Prado | IA Agéntica, Automatización y Conferencias</title>
+<meta name="description" content="Capacitación en IA Agéntica, automatización de procesos con IA y conferencias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#fdf3f1; --rosa-claro:#f6dcd9; --rosa:#d98c96; --rosa-fuerte:#b9566a;
+  --vino:#4a2530; --texto:#5a3a42; --blanco:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--texto);background:var(--crema);line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--vino);font-weight:400;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rosa-fuerte);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:10;background:rgba(253,243,241,.92);backdrop-filter:blur(8px)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;color:var(--rosa-fuerte);text-decoration:none}
+nav{display:flex;gap:26px;align-items:center}
+nav a{text-decoration:none;font-size:.95rem;font-weight:600}
+nav a:hover{color:var(--rosa-fuerte)}
+
+.btn{display:inline-block;background:var(--rosa-fuerte);color:var(--blanco);padding:13px 28px;border-radius:999px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;transition:background .2s}
+.btn:hover{background:var(--vino)}
+.btn.suave{background:transparent;color:var(--rosa-fuerte);border:2px solid var(--rosa-fuerte)}
+.btn.suave:hover{background:var(--rosa-fuerte);color:var(--blanco)}
+
+.hero{background:linear-gradient(135deg,var(--rosa-claro),var(--crema));padding:84px 0}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5vw,3.9rem)}
+.hero h1 em{color:var(--rosa-fuerte)}
+.hero p{margin:22px 0 32px;font-size:1.15rem;max-width:46ch}
+.hero .acciones{display:flex;gap:14px;flex-wrap:wrap}
+.retrato{aspect-ratio:4/5;border-radius:200px 200px 28px 28px;background:linear-gradient(160deg,var(--rosa),var(--rosa-fuerte));display:grid;place-items:center;color:var(--blanco);font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;text-align:center;padding:30px;overflow:hidden}
+.retrato img{width:100%;height:100%;object-fit:cover}
+
+section{padding:80px 0}
+section h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:14px}
+.intro{max-width:56ch;margin-bottom:40px}
+
+.servicios{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.servicio{background:var(--blanco);border-radius:24px 24px 24px 4px;padding:34px 28px;box-shadow:0 10px 30px rgba(185,86,106,.1)}
+.servicio .icono{font-size:2rem;margin-bottom:14px}
+.servicio h3{font-size:1.4rem;margin-bottom:10px}
+
+.sobre{background:var(--rosa-claro)}
+.sobre .wrap{max-width:760px}
+.sobre p+p{margin-top:14px}
+
+.contacto .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.contacto .datos p{margin:10px 0 26px}
+.wa{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#0b3d1f;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none}
+.wa:hover{background:#1fb858}
+form{background:var(--blanco);padding:32px;border-radius:24px;box-shadow:0 10px 30px rgba(185,86,106,.1);display:grid;gap:16px}
+label{font-weight:700;font-size:.92rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--rosa-claro);border-radius:12px;background:var(--crema);color:var(--texto);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rosa-fuerte)}
+textarea{min-height:120px;resize:vertical}
+
+footer{background:var(--vino);color:var(--rosa-claro);text-align:center;padding:28px 24px;font-size:.9rem}
+
+.wa-flotante{position:fixed;right:20px;bottom:20px;z-index:20;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none;font-size:1.7rem}
+
+@media(max-width:820px){
+  nav a:not(.btn){display:none}
+  .hero .wrap,.contacto .wrap,.servicios{grid-template-columns:1fr}
+  .retrato{max-width:320px;margin:0 auto}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Mariella Prado</a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto" class="btn" style="padding:9px 20px">Contáctame</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div>
+        <h1>Enseño a tu equipo a trabajar con <em>inteligencia artificial</em>.</h1>
+        <p>Capacitaciones, automatización de procesos y conferencias sobre IA, explicadas con claridad y pensadas para aplicarse desde el primer día.</p>
+        <div class="acciones">
+          <a class="btn" href="#contacto">Solicita una propuesta</a>
+          <a class="btn suave" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <!-- Para usar tu foto: reemplaza el texto por <img src="tu-foto.jpg" alt="Mariella Prado"> -->
+      <div class="retrato">Aquí va tu foto</div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <p class="intro">Tres formas de llevar la IA a tu empresa o evento.</p>
+      <div class="servicios">
+        <article class="servicio">
+          <div class="icono" aria-hidden="true">🎓</div>
+          <h3>Capacitación en IA Agéntica</h3>
+          <p>Talleres prácticos donde tu equipo aprende a crear y usar agentes de IA que planifican, deciden y ejecutan tareas por sí mismos.</p>
+        </article>
+        <article class="servicio">
+          <div class="icono" aria-hidden="true">⚙️</div>
+          <h3>Automatización de procesos con IA</h3>
+          <p>Identifico tareas repetitivas en tu operación y las automatizo para ahorrar tiempo, reducir errores y enfocar al equipo en lo importante.</p>
+        </article>
+        <article class="servicio">
+          <div class="icono" aria-hidden="true">🎤</div>
+          <h3>Conferencias</h3>
+          <p>Charlas inspiradoras y claras sobre el presente y futuro de la IA, para eventos corporativos, educativos y comunitarios.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre-mi">
+    <div class="wrap">
+      <h2>Sobre mí</h2>
+      <p>Soy Mariella Prado. Me dedico a acercar la inteligencia artificial a personas y organizaciones, con un enfoque práctico y sin tecnicismos innecesarios.</p>
+      <p>Mi objetivo es que cada persona que participe en una capacitación o conferencia salga con ideas claras y herramientas que pueda usar de inmediato.</p>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <div class="datos">
+        <h2>Conversemos</h2>
+        <p>Cuéntame qué necesitas y te respondo con una propuesta. También puedes escribirme directamente por WhatsApp.</p>
+        <a class="wa" href="https://wa.me/51997939493?text=Hola%20Mariella%2C%20quisiera%20informaci%C3%B3n%20sobre%20tus%20servicios." target="_blank" rel="noopener">
+          <span aria-hidden="true">💬</span> Escríbeme por WhatsApp
+        </a>
+      </div>
+
+      <form action="https://formsubmit.co/mariellaprado@hotmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu página web">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <label>Nombre
+          <input type="text" name="nombre" required autocomplete="name">
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>Servicio de interés
+          <select name="servicio">
+            <option>Capacitación en IA Agéntica</option>
+            <option>Automatización de procesos con IA</option>
+            <option>Conferencias</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" required></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="anio"></span> Mariella Prado. Todos los derechos reservados.</footer>
+
+<a class="wa-flotante" href="https://wa.me/51997939493?text=Hola%20Mariella%2C%20quisiera%20informaci%C3%B3n%20sobre%20tus%20servicios." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬</a>
+
+<script>document.getElementById('anio').textContent=new Date().getFullYear();</script>
+</body>
+</html>
